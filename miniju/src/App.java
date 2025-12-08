@@ -1,6 +1,12 @@
+import javax.swing.SwingUtilities;
+
 public class App {
     public static void main(String[] args) {
-        GameModel model = new GameModel();
-        System.out.println("Modelo. Tiempo inicial: " + model.getTimeLeft());
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new GameView();
+            }
+        });
     }
 }
