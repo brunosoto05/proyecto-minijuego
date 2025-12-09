@@ -5,7 +5,9 @@ public class App {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new GameView();
+                GameModel model = new GameModel();
+                GameView view = new GameView();
+                new GameController(model, view);
             }
         });
     }
