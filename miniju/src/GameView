@@ -109,3 +109,11 @@ public class GameView extends JFrame {
         playPanel.repaint();
     }
 }
+    public void addStartButtonListener(java.awt.event.ActionListener listener) {
+        startButton.addActionListener(listener);
+    }
+
+    public void addTargetButtonListener(java.awt.event.ActionListener listener) {
+        startButton.addActionListener(listener);
+    }
+}
