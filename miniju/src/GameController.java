@@ -77,7 +77,7 @@ public class GameController {
             view.setStatus("Jugando...");
             view.setGameRunning(true);
         } else {
-            view.setStatus("Detenido.");
+            view.setStatus("Detenido");
             view.setGameRunning(false);
         }
     }
