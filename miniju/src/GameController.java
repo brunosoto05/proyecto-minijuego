@@ -49,6 +49,7 @@ public class GameController {
         updateViewFromModel();
         view.setGameRunning(true);
         view.setStatus("Jugando...");
+        view.moveTargetRandom();
         gameTimer.start();
     }
 
@@ -65,8 +66,12 @@ public class GameController {
         model.tick();
         view.setTimeLeft(model.getTimeLeft());
 
-        if (!model.isRunning()) {
+        if (model.isRunning()) {
+            view.moveTargetRandom();
+        } else {
             gameTimer.stop();
+            view.setStatus("Fin Puntaje: " + model.getScore());
+            view.setGameRunning(false);
         }
     }
 
@@ -77,7 +82,7 @@ public class GameController {
             view.setStatus("Jugando...");
             view.setGameRunning(true);
         } else {
-            view.setStatus("Detenido");
+            view.setStatus("Detenido.");
             view.setGameRunning(false);
         }
     }

@@ -13,7 +13,7 @@ public class GameModel {
     public void reset() {
         this.score = 0;
         this.timeLeft = INITIAL_TIME;
-        this.running = true;
+        this.running = false;
     }
 
     public void startGame() {

@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class GameView extends JFrame {
@@ -30,7 +31,7 @@ public class GameView extends JFrame {
     private void initComponents() {
         scoreLabel = new JLabel("Puntaje: 0");
         timeLabel = new JLabel("Tiempo: 30");
-        statusLabel = new JLabel("");
+        statusLabel = new JLabel("Listo para jugar");
 
         startButton = new JButton("Iniciar juego");
         targetButton = new JButton("X");
@@ -45,6 +46,7 @@ public class GameView extends JFrame {
         targetButton.setBounds(150, 100, 60, 40);
 
         playPanel.add(targetButton);
+        targetButton.setEnabled(false);
     }
 
     private void configureLayout() {
@@ -109,11 +111,11 @@ public class GameView extends JFrame {
         playPanel.repaint();
     }
 
-    public void addStartButtonListener(java.awt.event.ActionListener listener) {
+    public void addStartButtonListener(ActionListener listener) {
         startButton.addActionListener(listener);
     }
 
-    public void addTargetButtonListener(java.awt.event.ActionListener listener) {
-        startButton.addActionListener(listener);
+    public void addTargetButtonListener(ActionListener listener) {
+        targetButton.addActionListener(listener);
     }
 }
