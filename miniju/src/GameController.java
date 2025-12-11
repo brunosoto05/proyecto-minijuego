@@ -70,8 +70,12 @@ public class GameController {
             view.moveTargetRandom();
         } else {
             gameTimer.stop();
-            view.setStatus("Fin Puntaje: " + model.getScore());
             view.setGameRunning(false);
+            if (model.isGameOver()) {
+                view.setStatus("Juego terminado. Puntaje final: " + model.getScore());
+            } else {
+                view.setStatus("Detenido");
+            }
         }
     }
 

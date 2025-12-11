@@ -1,18 +1,1 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Este proyecto es un minijuego hecho en Java usando Swing y MVC, pero más alla del juego en si, lo importante es como esta  hecho y organizado el código. Para manejar toda la parte lógica hice el archivo gamemodel, que básicamente lleva el puntaje el tiempo y el estado del juego sin tener nada que ver con la interfaz. La parte visual está en gameview, donde armé la ventana, los botones y las etiquetas y también hice un método para mover el objetivo usando un número aleatorio y un panel con layout nulo que hace que se mueva a cualquier posición. Tambien está gamecontroller que es como el “intermediario” aqui conecto los botones con el modelo y uso un timer para que el tiempo baje y el objetivo se mueva solo sin trabar la ventana. Y tambien está app.java que solo inicia todo creando el modelo, la vista y el controlador. El proyecto esta perfectamente dividido con MVC y con la funcionalidad correcta aplicando lo que hemos visto a lo largo de la materia como los pilares y el desarrollo de interfaz

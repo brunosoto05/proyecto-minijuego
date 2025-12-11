@@ -4,7 +4,7 @@ public class GameModel {
     private int timeLeft;
     private boolean running;
 
-    private static final int INITIAL_TIME = 30;
+    private static final int INITIAL_TIME = 30; // segundos
 
     public GameModel() {
         reset();
@@ -58,3 +58,4 @@ public class GameModel {
         return !running && timeLeft == 0;
     }
 }
+//si

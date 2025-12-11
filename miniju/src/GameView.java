@@ -31,10 +31,10 @@ public class GameView extends JFrame {
     private void initComponents() {
         scoreLabel = new JLabel("Puntaje: 0");
         timeLabel = new JLabel("Tiempo: 30");
-        statusLabel = new JLabel("Listo para jugar");
+        statusLabel = new JLabel("Estado: Detenido");
 
         startButton = new JButton("Iniciar juego");
-        targetButton = new JButton("X");
+        targetButton = new JButton("Hit");
         targetButton.setFocusPainted(false);
 
         topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 5));
